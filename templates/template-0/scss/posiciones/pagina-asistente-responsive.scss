@@ -1,0 +1,48 @@
+@import "../variables-tickon";
+#pagina-asistente-responsive{
+    padding:0px;  
+}
+.boton-desplegable-menus{
+    float: left;
+    width: $alturaPaginaAsistenteResponsive;
+    height: $alturaPaginaAsistenteResponsive;
+    border:0px;
+}
+.boton-desplegable-menus .glyphicon{
+    color:#fff;
+    font-size:$alturaPaginaAsistenteResponsive/2.5;
+}
+
+.boton-desplegable-pagina-superior-derecha{
+    float:right;
+    width: $alturaPaginaAsistenteResponsive*2;
+    height: $alturaPaginaAsistenteResponsive;
+    border:0px;
+    background: transparent;
+    outline:none;
+}
+.boton-desplegable-pagina-superior-derecha .glyphicon{
+    color:#fff;
+}
+.boton-desplegable-pagina-superior-derecha.es-desplegado-pagina-superior-derecha .badge{
+    opacity:0;
+}
+.boton-desplegable-pagina-superior-derecha.es-desplegado-pagina-superior-derecha .glyphicon-chevron-down:before {
+    content: "\e113";
+}
+.selector-menus .btn-default{
+    width:100%;
+    height:$alturaPaginaAsistenteResponsiveSelectorMenus;
+    border:none;
+    background:transparent;
+    color:$color1TextoGui;  
+}
+.selector-menus .btn-default .glyphicon{
+    color:$color1TextoGui;  
+}
+.selector-menus{
+    display: none;
+}
+#pagina-asistente-responsive .row .col-xs-6{
+    padding:0px;
+} 

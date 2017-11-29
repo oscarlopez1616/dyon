@@ -1,0 +1,50 @@
+<div class = "boton-menu-principal background-by-modulo" [ngClass]="{'opened': pagina.esOpenMenuPrincipal,'closed': !pagina.esOpenMenuPrincipal}"
+     (click)='clickMenuPrincipal()'>
+    <span></span>  
+</div>
+
+<div id="desplegable-menu-principal" [ngClass]="{'opened': pagina.esOpenMenuPrincipal,'closed': !pagina.esOpenMenuPrincipal}">
+    <div id="desactivador-menu-principal"></div>
+
+     <div id="desplegable-menu-principal-contenedor" (mouseleave)="cerrarMenuPrincipal()">
+        <div class="fila-menu-principal">
+            <div class="casilla-menu-principal casilla-menu-principal-planner ">
+                <!--                <a class="icono-casilla-menu-principal-planner" [routerLink]="['OutletPlannerHome']">TicketEX
+                                    PLANNER</a>-->
+                <a class="icono-casilla-menu-principal-planner" >TicketEX
+                    PLANNER</a>
+            </div>
+            <div class="casilla-menu-principal casilla-menu-principal-coffee ">
+                <a class="icono-casilla-menu-principal-coffee" href="#">TicketEX COFFEE</a>
+            </div>
+            <div class="casilla-menu-principal casilla-menu-principal-partner">
+                <a class="icono-casilla-menu-principal-partner" href="#">TicketEX PARTNER</a>
+            </div>
+        </div>
+        <div class="fila-menu-principal ">
+            <div class="casilla-menu-principal casilla-menu-principal-cms ">
+                <a class="icono-casilla-menu-principal-cms" href="#">CMS</a>
+            </div>
+            <div class="casilla-menu-principal casilla-menu-principal-connect ">
+                <a class="icono-casilla-menu-principal-connect" href="#">TicketEX CONNECT</a>
+            </div>
+            <div class="casilla-menu-principal casilla-menu-principal-shopping">
+                <a class="icono-casilla-menu-principal-shopping" href="#">TicketEX SHOPPING</a>
+            </div>
+
+        </div>
+        <div class="fila-menu-principal ">
+            <div class="casilla-menu-principal casilla-menu-principal-boxoffice ">
+                <a class="icono-casilla-menu-principal-boxoffice" href="#">TAQUILLA</a>
+            </div>
+            <div class="casilla-menu-principal casilla-menu-principal-billing ">
+                <a class="icono-casilla-menu-principal-billing" href="#">FACTURACIÓN</a>
+            </div>
+            <div class="casilla-menu-principal casilla-menu-principal-club ">
+                <a class="icono-casilla-menu-principal-club" href="#">TicketEX CLUB</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

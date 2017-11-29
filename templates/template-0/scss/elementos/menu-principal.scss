@@ -1,0 +1,231 @@
+@import "../variables-tickon";
+@import "../../../../node_modules/compass-sass-mixins/lib/compass";
+
+.boton-menu-principal {
+    float: left;
+    width: $anchoBotonMenuPrincipal;
+    height: $alturaPaginaSuperiorLateral;
+    cursor: pointer;
+    position:relative;
+    z-index:2;
+}
+.boton-menu-principal.opened {
+    background-color: #000;
+}
+.boton-menu-principal span{
+    display: block;
+    width: $anchoBotonMenuPrincipal;
+    height: $alturaPaginaSuperiorLateral;
+    $temp : $rutaImg+"/tx-sprite.png";
+    background: url($temp) 0 0 no-repeat transparent;
+}
+
+
+::selection {
+    background: transparent;
+}
+::-moz-selection {
+    background: transparent; 
+}
+//////////////////////////animaciones menu y otros
+
+
+
+.fila-menu-principal {
+    display: flex;
+}
+
+#desplegable-menu-principal {
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+
+}
+
+#desplegable-menu-principal.opened{
+    width:100%;
+    height:100%;
+    visibility:visible;
+
+}
+
+#desplegable-menu-principal.closed {
+    visibility: hidden;
+    float: left;
+    width: 100%;
+    height: 0px;
+    pointer-events:none;
+    background: rgba(0,0,0,0.95);
+    position:absolute;
+    z-index:-1;
+}
+
+#desplegable-menu-principal-contenedor {
+    position:absolute;
+    left: 65px;
+    padding: 0px 25px 25px 0px;
+    display: inline-block;
+    z-index:1;
+}
+
+#desplegable-menu-principal.closed #desactivador-menu-principal {
+    background: rgba(0, 0, 0, 0);
+}
+
+
+#desplegable-menu-principal  span{
+    float: left;
+    width: 65px;
+    height: 65px;
+    background: url("../templates/template-0/gui/images/tx-sprite.png") 0 0 no-repeat transparent;
+}
+
+#desplegable-menu-principal .casilla-menu-principal {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    float: left; 
+    width: 16px;
+    height: 14px;
+    margin: 0px 2px 2px 0;
+    @include transition(none);
+    overflow: hidden;
+}
+
+#desplegable-menu-principal .casilla-menu-principal  a {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.8;
+    @include transition-property (background);
+    @include transition-duration (0.8s);
+
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding-top: 100px;
+}
+
+#desplegable-menu-principal .casilla-menu-principal  a:hover {
+    background-color: transparent;
+    @include transition-property (background);
+    @include transition-duration (0.3s);
+}
+
+#desplegable-menu-principal.closed .casilla-menu-principal {
+    background: #999;
+}
+
+#desplegable-menu-principal .fila-menu-principal:nth-of-type(1) .casilla-menu-principal:nth-of-type(1)
+{
+    @include transition-delay (0s);
+}
+
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(1) .casilla-menu-principal:nth-of-type(2),
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(2) .casilla-menu-principal:nth-of-type(1)
+{
+    @include transition-delay (0.05s);
+}
+
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(1) .casilla-menu-principal:nth-of-type(3),
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(2) .casilla-menu-principal:nth-of-type(2),
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(3) .casilla-menu-principal:nth-of-type(1)
+{
+    @include transition-delay (0.1s);
+}
+
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(1) .casilla-menu-principal:nth-of-type(4),
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(2) .casilla-menu-principal:nth-of-type(3),
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(3) .casilla-menu-principal:nth-of-type(2)
+{
+    @include transition-delay (0.15s);
+}
+
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(1) .casilla-menu-principal:nth-of-type(5),
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(2) .casilla-menu-principal:nth-of-type(4),
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(3) .casilla-menu-principal:nth-of-type(3)
+{
+    @include transition-delay (0.2s);
+}
+
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(1) .casilla-menu-principal:nth-of-type(6),
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(2) .casilla-menu-principal:nth-of-type(5),
+#desplegable-menu-principal div.fila-menu-principal:nth-of-type(3) .casilla-menu-principal:nth-of-type(4)
+{
+    @include transition-delay (0.25s);
+}
+
+#desplegable-menu-principal.opened .casilla-menu-principal {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    height: 140px;
+    width: 163px;
+    @include transition-property (background, opacity, height, width);
+    @include transition-duration (0.6s, 0.2s, 0.1s, 0.1s);
+}
+
+
+#desactivador-menu-principal {
+    z-index:0;
+    left: 0px;
+    top:0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.95);
+    @include transition-property (background);
+    @include transition-duration (0.3s);
+}
+
+/* ICONOS */
+$menuPrincipalIcons : $rutaImg+"/modulo-icons.png";
+.icono-casilla-menu-principal-planner {
+    background-image: url($menuPrincipalIcons);
+    background-position: -15px -30px;
+}
+
+.icono-casilla-menu-principal-coffee {    
+    background-image: url($menuPrincipalIcons);
+    background-position: -215px -30px;
+}
+
+.icono-casilla-menu-principal-partner {
+    background-image: url($menuPrincipalIcons);
+    background-position: -415px -30px;
+}
+
+.icono-casilla-menu-principal-cms {
+    background-image: url($menuPrincipalIcons);
+    background-position: -15px -230px;
+}
+
+.icono-casilla-menu-principal-connect {
+    background-image: url($menuPrincipalIcons);
+    background-position: -215px -230px;
+}
+
+.icono-casilla-menu-principal-shopping {
+    background-image: url($menuPrincipalIcons);
+    background-position: -415px -230px;
+}
+
+.icono-casilla-menu-principal-boxoffice {
+    background-image: url($menuPrincipalIcons);
+    background-position: -15px -430px;
+}
+
+.icono-casilla-menu-principal-billing {
+    background-image: url($menuPrincipalIcons);
+    background-position: -215px -430px;
+}
+
+.icono-casilla-menu-principal-club {
+    background-image: url($menuPrincipalIcons);
+    background-position: -415px -430px;
+}
+
+
+
+

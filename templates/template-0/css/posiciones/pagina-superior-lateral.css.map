@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,YAAa,CACT,KAAK,CAAE,IAAI,CACX,KAAK,CAAE,KAA8F,CACrG,MAAM,CCaY,IAA4B,CDX9C,UAAU,CAAE,4EAA4B,CACxC,gBAAgB,CCNT,IAAO,CDOd,YAAY,CAAE,eAAqB",
+"sources": ["../../scss/posiciones/pagina-superior-lateral.scss","../../scss/variables-tickon.scss"],
+"names": [],
+"file": "pagina-superior-lateral.css"
+}

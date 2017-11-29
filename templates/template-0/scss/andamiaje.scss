@@ -1,0 +1,347 @@
+@import "variables-tickon";
+@import "../../../node_modules/compass-sass-mixins/lib/compass";
+
+@mixin getPaginaSuperior() {
+    @media (max-width: $screen-sm-max) {
+        position:relative;
+        margin: 0 (-$grid-gutter-width/2) 0;
+    }
+    @media (min-width: $screen-md-min)  {
+        position:fixed;
+    }
+}
+@mixin  getPaginaSuperiorIzquierda (){
+    @media (max-width: $screen-sm-max) {
+        margin: 0 (-$grid-gutter-width/2) 0;
+    }
+}
+@mixin getPaginaCentro($esPaginaSuperiorDerechaDesplegado) {
+    @media (max-width: $screen-xs-max) {
+        @if $esPaginaSuperiorDerechaDesplegado == true{
+            margin-top: $margenPaginaCentroSuperior*2+$alturaPaginaAsistenteResponsive+$alturaPaginaCentroSuperior*2;
+        }@else{
+            margin-top: 0;
+        }
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        @if $esPaginaSuperiorDerechaDesplegado == true{
+            margin-top: $margenPaginaCentroSuperior*2+$alturaPaginaAsistenteResponsive+$alturaPaginaCentroSuperior*2;
+        }@else{
+            margin-top: 0;
+        }
+    }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        margin-top: $margenPaginaCentroSuperior+$alturaPaginaCentroSuperior;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-top: $margenPaginaCentroSuperior+$alturaPaginaCentroSuperior;
+    }
+}
+@mixin  getPaginaLateral (){
+    @media (max-width: $screen-xs-max) {
+        width:100%;
+        display:none; //borrar
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        width:100%;
+        display:none; //borrar
+    }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        width:$anchoPaginaLateral;
+    }
+    @media (min-width: $screen-lg-min) {
+        width:$anchoPaginaLateral;
+    } 
+
+}
+
+@mixin getPaginaCentroSuperior($esPaginaSuperiorDerechaDesplegado) {
+    @media (max-width: $screen-sm-max) {
+        position:relative;
+        height: $alturaPaginaCentroSuperior*2;
+        margin: (-$grid-gutter-width/2) (-$grid-gutter-width/2) ($grid-gutter-width/2);
+    }
+    @media (min-width: $screen-md-min)  {
+        position:fixed;
+        left:$grid-gutter-width/2;
+        width:100%;
+        height: $alturaPaginaCentroSuperior;
+        top: $margenPaginaCentroSuperior;
+    }
+}
+
+@mixin  getPaginaCentroSuperiorDerecha (){
+    @media (max-width: $screen-xs-max) {
+        border-top: $anchoBordeGUIGordo solid $colorBordeCentroSuperior;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        border-top: $anchoBordeGUIGordo solid $colorBordeCentroSuperior;
+    }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        border-top: 0;
+    }
+    @media (min-width: $screen-lg-min) {
+        border-top: 0;
+    } 
+}
+
+@mixin getPaginaPaddingLeft() {
+    @media (max-width: $screen-xs-max) {
+        padding-left:-$grid-gutter-width/2;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        padding-left:-$grid-gutter-width/2;
+    }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        padding-left:$paddingPagina;
+    }
+    @media (min-width: $screen-lg-min) {
+        padding-left:$paddingPagina;
+    }
+}
+@mixin getPaginaPaddingFixed() {
+    @media (max-width: $screen-xs-max) {
+        padding-left:-$grid-gutter-width/2;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        padding-left:-$grid-gutter-width/2;
+    }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        padding-left:$paddingPaginaFixed;
+    }
+    @media (min-width: $screen-lg-min) {
+        padding-left:$paddingPaginaFixed;
+    }
+}
+
+
+html, body {
+    height:100%;
+}
+
+#pagina{
+    @include getPaginaPaddingLeft() {};
+    padding-right:0px;
+    background:$color1GUI;
+}
+#pagina.es-lateral-colapsado{
+    padding-left:$grid-gutter-width/2+$anchoBarraColapsarInPagina
+}
+
+#pagina .barra-colapsar{
+    height:100%;
+    position:fixed;
+    margin-left:-14px;
+    width:$anchoBarraColapsarInPagina;
+    top:0px;
+    left:$leftBarraColapsarInPagina;
+    $temp : $rutaImg+"/arrows.png";
+    background: url($temp) 225px 50% no-repeat $color1GUI fixed;
+    border-style: solid;
+    border-width: 0 $anchoBordeGUIGordo 0 0;
+    border-color: $colorBordeGUI;
+    cursor:pointer;
+}
+
+#pagina.es-lateral-colapsado .barra-colapsar{
+    border-width: 0 $anchoBordeGUIGordo 0 0;
+    margin-left:0px;
+    left:0px;
+    $temp : $rutaImg+"/arrows.png";	
+    background: url($temp) -37px 50% no-repeat $color1GUI fixed;
+
+}
+
+#pagina-superior{
+    background:$color1GUI;
+    z-index:2;
+    width:100%;
+    left:$grid-gutter-width/2;
+    @include getPaginaPaddingFixed() {};
+    @include getPaginaSuperior () {};
+
+}
+#pagina.es-lateral-colapsado #pagina-superior{
+    padding-left:$grid-gutter-width/2;
+
+}
+#pagina-superior-derecha,#pagina-superior-izquierda{
+    height: $alturaPaginaSuperior;
+}
+#pagina-superior-lateral{
+    //background:#fee;
+    z-index:2;
+    width:$anchoPaginaSuperiorLateral;
+    position:absolute;
+    left:0px;
+    height: $alturaPaginaSuperiorLateral;
+    border-width:0px $anchoBordeGUIGordo 0px 0px;
+    border-color:$colorBordeGUI;
+    border-style:solid;
+}
+#pagina.es-lateral-colapsado #pagina-superior-lateral{
+    border:none;
+}
+
+#pagina.es-lateral-colapsado #pagina-superior-lateral .logo-tickon{
+    display:none;
+}
+#pagina.es-lateral-colapsado #pagina-superior-lateral .boton-menu-principal{
+    width:$anchoBarraColapsarInPagina
+}
+#pagina.es-lateral-colapsado #pagina-superior-lateral .boton-menu-principal span{
+    display:none;
+}
+
+#pagina-asistente-responsive{
+    background:$color1GUI;
+    z-index:3;
+    height:$alturaPaginaAsistenteResponsive;
+}
+#pagina-asistente-responsive .selector-menus{
+    display: none;
+}
+
+#pagina-superior-izquierda{
+    @include getPaginaSuperiorIzquierda() {};
+    z-index:0;
+    padding: 0px;
+}
+
+#pagina-superior-derecha{
+    z-index:1;
+    padding:0px;
+    text-align: right;
+    border-bottom:$anchoBordeGUIGordo solid $colorBordeGUI;
+}
+
+#pagina-superior-derecha .componentes-pagina-superior-derecha a.boton-pagina-superior-derecha{
+    text-align: left;
+    float: right;
+    border-left: $anchoBordeGUIGordo solid $colorBordeGUI;
+    height: 100%;
+    min-width: $anchoMinimoBotonPaginaSuperiorDerecha;
+    background-color: $color1GUI;
+    @include transition-property(background-color);
+    @include transition-duration(0.2s);
+    position: relative;
+    color: #fff;
+}
+
+#pagina-superior-derecha .componentes-pagina-superior-derecha a.boton-pagina-superior-derecha span.icono{
+    display:block;
+    height:100%;
+    width:100%;
+}
+
+#pagina-superior-derecha .desplegable {
+    position: absolute;
+    display: block;
+    min-width: $anchoDesplegablePaginaSuperiorDerecha;
+    height: 140px;
+    overflow: hidden;
+    top: -700px;
+    right: 0px;
+    text-align: right;
+    color: $colorBordeGUI;
+    background: $color1GUI;
+    border-width: $anchoBordeGUIGordo 0 $anchoBordeGUIGordo $anchoBordeGUIGordo;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    z-index: -10;
+    @include transition-property(top, height, opacity, padding);
+    @include transition-duration(0.3s, 0.2s, 0.2s, 0.2s);
+    @include transition-timing-function(linear, ease, ease, ease);
+    @include transition-delay(0.3s, 0s, 0s, 0s);
+    @include box-shadow(#000 0 6px 25px -13px);
+}
+
+#pagina-superior-derecha .desplegable.opened {
+    display: block;
+    top: $alturaPaginaSuperior+-$anchoBordeGUIGordo;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    height: 270px;
+    z-index: 1;
+    @include transition-property(top, height, opacity, padding);
+    @include transition-duration(0s, 0.3s, 0.05s, 0.3s);
+    @include transition-delay(0s, 0s, 0s, 0s);
+}
+#pagina-superior-derecha .desplegable .contenido {
+    background: $color1GUI;
+    height:100%;
+    @include transition-property(padding);
+    @include transition-duration(0.3s);
+    padding:$grid-gutter-width/2 $grid-gutter-width/2 0px $grid-gutter-width/2;
+}
+#pagina-superior-derecha .desplegable.opened .contenido {
+    display:block;
+}
+
+#pagina-lateral{
+    float:left;
+    background:$color1GUI;
+    z-index:1;
+    position:absolute;
+    left:0px;
+    margin-top: $margenPaginaLateral;
+    @include getPaginaLateral() {}
+
+}
+
+
+#pagina-centro{
+    background:$fondoPaginaCentro;
+    z-index:0;
+    @include getPaginaCentro(false) {}
+    padding-top: 15px;
+    vertical-align: top;
+    position: relative;
+    width: 100%;
+    padding-right:$grid-gutter-width/2
+}
+
+#pagina-centro.es-desplegado-pagina-superior-derecha{
+    @include getPaginaCentro(true) {}
+}
+
+#pagina-centro-superior{
+    background: #f8f8f8;
+    border-bottom: $anchoBordeGUIGordo solid $colorBordeCentroSuperior;
+    z-index:1;
+    @include getPaginaPaddingFixed() {};
+    @include getPaginaCentroSuperior(false) {}
+}
+
+#pagina-centro.es-desplegado-pagina-superior-derecha #pagina-centro-superior{
+    @include getPaginaCentroSuperior(true) {}
+}
+#pagina.es-lateral-colapsado  #pagina-centro-superior{
+    padding-left:$grid-gutter-width/2;
+}
+#pagina-centro-superior-izquierda{
+    z-index:0;
+    padding:0px;
+}
+
+#pagina-centro-superior-derecha{
+    @include getPaginaCentroSuperiorDerecha() {}
+    background: #f8f8f8;
+    text-align: right;
+    z-index:1;
+    padding:2px 15px 0 0;
+}
+
+#pagina-centro-principal {
+    z-index:0;
+    height:2000px;  //borrar 
+}
+
+
+.fixed{
+    position:fixed !important;
+    width:100%;
+    //opacity:0.8;
+}

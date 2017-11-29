@@ -1,0 +1,17 @@
+@import "../variables-tickon";
+
+.logo-modulo {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=35);
+    opacity: 0.7;
+    margin: 2px 0 0px 0;
+    margin: 10px 58px 10px 58px;
+    $temp : $rutaImg+"/icon_planner.png";
+    background: url($temp) 0 0 no-repeat transparent;
+    display:block;
+    height:100px;
+    width:100px;
+}
+.logo-modulo.active{
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}

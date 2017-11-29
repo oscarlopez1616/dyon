@@ -1,0 +1,12 @@
+<div class="col-lg-4 col-lg-push-8 col-md-5 col-md-push-7 col-sm-12 " 
+     [ngClass]="{'hidden-sm hidden-xs' : !pagina.esDesplegadoPaginaSuperiorDerecha}"
+     id="pagina-superior-derecha"> 
+    <nav class="componentes-pagina-superior-derecha">
+            <div (mouseleave)="cerrarTodosDesplegablesSuperiorDerecha()"> 
+                <menu-cerrar-sesion>  </menu-cerrar-sesion>
+                <menu-configuracion-usuario>  </menu-configuracion-usuario>
+                <menu-ayuda></menu-ayuda>
+                <manager-front-end-teamwork></manager-front-end-teamwork>
+            </div>
+    </nav> 
+</div>

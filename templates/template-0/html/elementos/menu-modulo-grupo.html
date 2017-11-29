@@ -1,0 +1,6 @@
+<ul class="menu-modulo-grupo">
+    <li class="titulo-menu-modulo">{{menuGrupoModulo.titulo}}</li>
+    <li *ngFor="#lineaMenu of lineasMenu"> 
+            <menu-modulo-unidad [lineaMenu]='lineaMenu' ></menu-modulo-unidad>   
+    </li>
+</ul>

@@ -1,0 +1,7 @@
+@import "../variables-tickon";
+
+.boton .icono{
+        $temp : $rutaImg+"/tx-sprite.png";
+	background: url($temp) -209px 0 no-repeat
+		transparent;
+}

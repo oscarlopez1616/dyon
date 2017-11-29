@@ -1,0 +1,26 @@
+@import "../variables-tickon";
+ul {
+    border-top:$anchoBordeGUIGordo solid $colorSeparacionGUI;
+    padding: 10px 0 0 0px;
+    list-style: none;
+    color: $color2TextoGui;
+}
+
+.titulo-menu-modulo {
+    margin-bottom: 4px;
+    padding-left: 20px;
+}
+ul > li {
+    height: 22px;
+    line-height: 22px;
+    cursor:default;
+    margin-top:2px;
+    position:relative;
+}
+
+.titulo-menu-modulo:hover, .titulo-menu-modulo{
+    cursor:default;
+}
+li .active {
+    color: #fff;
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,EAAG,CACC,UAAU,CAAC,cAA6C,CACxD,OAAO,CAAE,YAAY,CACrB,UAAU,CAAE,IAAI,CAChB,KAAK,CCCO,IAAO,CDEvB,mBAAoB,CAChB,aAAa,CAAE,GAAG,CAClB,YAAY,CAAE,IAAI,CAEtB,KAAQ,CACJ,MAAM,CAAE,IAAI,CACZ,WAAW,CAAE,IAAI,CACjB,MAAM,CAAC,OAAO,CACd,UAAU,CAAC,GAAG,CACd,QAAQ,CAAC,QAAQ,CAGrB,6CAA8C,CAC1C,MAAM,CAAC,OAAO,CAElB,UAAW,CACP,KAAK,CAAE,IAAI",
+"sources": ["../../scss/elementos/menu-modulo-grupo.scss","../../scss/variables-tickon.scss"],
+"names": [],
+"file": "menu-modulo-grupo.css"
+}

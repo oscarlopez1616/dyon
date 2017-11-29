@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKA,+BAAgC,CAC/B,UAAU,CAAE,sFACA",
+"sources": ["../../scss/elementos/menu-configuracion-usuario.scss"],
+"names": [],
+"file": "menu-configuracion-usuario.css"
+}

@@ -1,0 +1,61 @@
+@import "../variables-tickon";
+@import "../../../../node_modules/compass-sass-mixins/lib/compass";
+/******************************************************************************************/
+/*****************************************  MenuBreadcrumbs  ********************************/
+/******************************************************************************************/
+
+ .barra-breadcrumbs {
+     @include transition-property(left);
+     @include transition-duration(0.3s);
+}
+
+ .barra-breadcrumbs {
+	color: $color1TextoGui;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	background: $color1GUI;
+	border-bottom: 2px solid $colorBordeGUI;
+}
+
+ .breadcrumbs {
+	color: #777;
+	display: inline-block;
+	letter-spacing: 3px;
+}
+
+ .breadcrumbs a {
+	letter-spacing: 0px;
+	display: inline-block;
+	height: 28px;
+	padding: 5px 7px 0px 20px;
+	color: $color1TextoGui;
+	margin: 0 -7px 0 0;
+	border-left: 2px solid transparent;
+	border-right: 2px solid transparent;
+}
+
+ .breadcrumbs a:before {
+	content: ">";
+	color: $color2TextoGui;
+	margin: 0 10px 0 -10px;
+}
+
+ .breadcrumbs a:first-child:before {
+	content: "";
+}
+
+ .breadcrumbs a:hover {
+	color: $colorTextoHoverGui;
+	background-color: rgba(0, 0, 0, 0.2);
+	text-decoration: none;
+	border-left: 2px solid $colorBordeGUI;
+	border-right: 2px solid $colorBordeGUI;
+}
+
+ .breadcrumbs a:first-child:hover {
+	padding-left: 22px;
+	border-left: 0px solid $colorBordeGUI;
+}

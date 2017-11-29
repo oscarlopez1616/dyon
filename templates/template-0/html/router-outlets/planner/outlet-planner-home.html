@@ -1,0 +1,179 @@
+<div class="col-md-6">
+    <div class="panel panel-default ">
+        <div class="panel-heading clearfix">
+            <div class="pull-right">
+                <button type="button" class="btn btn-default"
+                        (click)=mostrarMenuModulos()>
+                    <span class="glyphicon glyphicon-refresh dy-yellow"></span> Botón
+                    1
+                </button>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-open dy-blue"></span> Botón 2
+                </button>
+            </div>
+            <h2>Heading de panel con botones</h2>
+
+        </div>
+        <div class="panel-body">
+            --Contenido del panel--
+            <p>
+                --Contenido del panel--<br> --Contenido del panel--<br>
+                --Contenido del panel--<br> --Contenido del panel--<br>
+            </p>
+
+
+<!--            Inicio SingleThread #SingleThread-0-->
+            <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal-0">
+                SingleThread-0
+            </button>
+            <single-thread data-id = "0"
+                           data-titulo="Mi SingleThread"
+                           data-htmlBody="<p>hola<p>"
+                           data-htmlFooter='
+                           <button type="button" class="btn btn-default button-ko" data-dismiss="modal">
+                           <span class="glyphicon glyphicon-remove dy-red"></span>
+                           Cerrar
+                           </button>
+                           <button type="button" class="btn btn-default button-ok">
+                           <span class="glyphicon glyphicon-ok dy-green"></span>
+                           Guardar Cambios
+                           </button>
+                           '>
+
+            </single-thread>
+<!--            Fin #SingleThread-0-->
+
+
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="panel panel-default ">
+        <div class="panel-heading clearfix">
+            <div class="pull-right"></div>
+            <h2>Heading de panel sin botones</h2>
+        </div>
+        <div class="panel-body">
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-zoom-in"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-repeat"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-trash"></span>
+            </button>
+
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="panel panel-default ">
+        <div class="panel-heading clearfix">
+            <div class="pull-right">
+                <button type="button" class="btn btn-default button-ok-off ">
+                    <span class="glyphicon glyphicon-ok dy-green"></span> Guardado
+                </button>
+            </div>
+            <h2>Heading de panel con boton "guardar cambios"</h2>
+
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">Ejemplo inputs:</div>
+                <div class="col-md-10">
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control col-md-4"
+                               placeholder="Texto">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" placeholder="Texto">
+                    </div>
+                    <div class="form-group col-md-7">
+                        <select class="form-control">
+                            <option>Select</option>
+                        </select>
+                    </div>
+<!--                    Inicio SingleThread #SingleThread-0-->
+                    <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal-1">
+                        SingleThread-1
+                    </button>
+                    <single-thread data-id = "1"
+                                   data-titulo="Mi SingleThread"
+                                   data-htmlBody="<p>hola1<p>"
+                                   data-htmlFooter='
+                                   <button type="button" class="btn btn-default button-ko" data-dismiss="modal">
+                                   <span class="glyphicon glyphicon-remove dy-red"></span>
+                                   Cerrar
+                                   </button>
+                                   <button type="button" class="btn btn-default button-ok">
+                                   <span class="glyphicon glyphicon-ok dy-green"></span>
+                                   Guardar Cambios
+                                   </button>
+                                   '>
+
+                    </single-thread>
+<!--                    Fin #SingleThread-0-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-6">
+    <div class="panel panel-default ">
+        <div class="panel-heading clearfix">
+            <div class="pull-right">
+                <button type="button" class="btn btn-default button-ok">
+                    <span class="glyphicon glyphicon-ok dy-green"></span> Guardar
+                    cambios
+                </button>
+            </div>
+            <h2>Panel 4</h2>
+
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+<!--                Ejemplo input: <input type="text" class="form-control"
+                                      id="exampleInputEmail1" placeholder="Texto">-->
+            </div>
+<!--            Inicio SingleThread #SingleThread-0-->
+            <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal-2">
+                SingleThread-2
+            </button>
+            <single-thread data-id = "2"
+                           data-titulo="Mi SingleThread"
+                           data-htmlBody="<p>hola2<p>"
+                           data-htmlFooter='
+                           <button type="button" class="btn btn-default button-ko" data-dismiss="modal">
+                           <span class="glyphicon glyphicon-remove dy-red"></span>
+                           Cerrar
+                           </button>
+                           <button type="button" class="btn btn-default button-ok">
+                           <span class="glyphicon glyphicon-ok dy-green"></span>
+                           Guardar Cambios
+                           </button>
+                           '>
+
+            </single-thread>
+<!--            Fin #SingleThread-0-->
+        </div>
+    </div>
+</div>
+
+
+<!--<multi-thread id="multi-thread-0" 
+              data-id="0" 
+              data-titulo="MultiThread 0"
+              data-width="300" 
+              data-height="300"
+              data-htmlBody="<p>hola 0</p>">  
+</multi-thread>
+<multi-thread id="multi-thread-1" 
+              data-id="1" 
+              data-titulo="MultiThread 1"
+              data-width="400" 
+              data-height="400"
+              data-htmlBody="<p>hola 1</p>">  
+</multi-thread>-->
+

@@ -1,0 +1,94 @@
+<div class="container-fluid es-lateral-colapsado modulo-planner" id="pagina"
+     [ngClass]="{'es-lateral-colapsado': pagina.lateralColapsado}" (window:resize)='onResizeColapsarLateral()'> 
+    
+    
+    <div class="hidden-sm hidden-xs barra-colapsar" (click)='colapsarLateral()'>
+        
+    </div>
+    
+    
+    
+
+    <pagina-superior>
+
+    </pagina-superior>
+    <div class="row clearfix" >
+        <pagina-lateral>
+
+        </pagina-lateral>
+        <main>
+            <div class="col-lg-12" id="pagina-centro" [ngClass]="{'es-desplegado-pagina-superior-derecha': pagina.esDesplegadoPaginaSuperiorDerecha}"> 
+                <div class="row" id="pagina-centro-superior">  
+   
+                    <div class="col-md-8 col-sm-12" id="pagina-centro-superior-izquierda">
+                        <div class="barra-titulo"
+                             [ngClass]="{'barra-pasos': pagina.tienePasos}">
+
+                             <h1>{{pagina.tituloPagina}}</h1>
+                        </div>
+                    </div>
+                     <div class="col-md-4 col-sm-12" id="pagina-centro-superior-derecha"> 
+                            <!--  MOSTRAR O ESCONDER BOTONES OK -->
+                            <a class="btn btn-default button-ok-principal">
+                                <span class="glyphicon glyphicon-ok"></span>
+                                Guardar
+                            </a>
+                            <!--  MOSTRAR O ESCONDER BOTONES KO -->
+                            <a class="btn btn-default button-ko-principal">
+                                <span class="glyphicon glyphicon-remove"></span>
+                                Cancelar
+                            </a>      
+                    </div>   
+                </div>
+
+                <div class="row" id="pagina-centro-principal">  
+                        <router-outlet></router-outlet>
+                </div> 
+            </div>
+        </main>
+    </div>
+
+</div>
+
+<!--<div id="pagina-contenedor" class="modulo-planner" 
+     [ngClass]="{'menu-principal-opened-only-on-bootstrap-xs-resolution' : pagina.esOpenModuloMenu}"
+(window:resize)="onResizeColapsarLateral()"
+>
+        <pagina-superior> </pagina-superior>
+        <div id="_pagina-inferior-contenedor">
+                <div id="_pagina-scroll-contenedor">
+                        <div id="_pagina-scroll">
+                                <div id="_pagina-inferior">
+                                        <pagina-lateral> </pagina-lateral>
+                                        <main>  						<pagina-centro>	</pagina-centro>   pagina centro inyectada empieza aqui 
+                                        <div class="barra-titulo"
+                                                [ngClass]="{'barra-pasos': pagina.tienePasos}">
+
+                                                <h1>{{pagina.tituloPagina}}</h1>
+                                        </div>
+                                        <div class="btn-group botones-ok-ko" role="group">
+                                                  MOSTRAR O ESCONDER BOTONES OK 
+                                                <a *ngIf="pagina.tieneBotonOk" class="btn btn-default button-ok">
+                                                        <span class="glyphicon glyphicon-ok"></span>
+                                                        {{pagina.textoBotonOk}}
+                                                </a>
+                                                  MOSTRAR O ESCONDER BOTONES KO 
+                                                <a *ngIf="pagina.tieneBotonKo" class="btn btn-default button-ko">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                        {{pagina.textoBotonKo}}
+                                                </a>
+                                        </div>
+                                        <div id="pagina-centro" class="container">
+                                                <div class="row">
+                                                         Aqui las vistas enrutadas 
+                                                        <router-outlet></router-outlet>
+
+                                                </div>
+                                        </div>
+                                         pagina centro inyectada acaba aqui  </main>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <pagina-flotante></pagina-flotante>
+</div>-->

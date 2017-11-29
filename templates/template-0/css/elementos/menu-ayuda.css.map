@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,aAAa,CAEZ,UAAU,CAAE,yFACA",
+"sources": ["../../scss/elementos/menu-ayuda.scss"],
+"names": [],
+"file": "menu-ayuda.css"
+}

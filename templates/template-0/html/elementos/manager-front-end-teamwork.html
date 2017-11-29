@@ -1,0 +1,56 @@
+<a class="boton-pagina-superior-derecha boton" (click)="onclickDesplegableSuperiorDerecha()">
+    TicketEX Teamwork
+    <span class="badge background-by-modulo">4</span>
+</a>
+
+<div class="desplegable" [ngClass]="{'opened': isOpened}">
+     <div class="widget-barra">
+        <a class="widget-boton active">
+            <span class="glyphicon glyphicon-comment"></span>
+            <span class="badge background-by-modulo">3</span> 
+        </a>
+        <a class="widget-boton">
+            <span class="glyphicon glyphicon-briefcase"></span>
+            <span class="badge background-by-modulo">1</span> 
+        </a>
+        <a class="widget-boton">
+            <span class="glyphicon glyphicon-exclamation-sign"></span>
+        </a>	
+    </div>
+    <div class="contenido active" >
+        <div class="menu-chat">
+            <button class="btn btn-default" type="button" >
+               <span class="glyphicon glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+            </button>
+             <label>Javi Hernández</label>
+        </div>
+        <div class="chat">
+            <div class="mensajes-chat" [scrollTop]="scroll.offsetHeight">
+                <div class="scroll-detector" #scroll >
+                    <div class="emisor"><span>Que tal como estas?</span></div>
+                    <div class="recipiente"><span> Bien y tu</span></div>
+                    <div class="emisor" *ngFor="#mensaje of mensajes"><span>{{mensaje.cuerpo}}</span></div>
+                </div>
+            </div>
+
+
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control" placeholder="Escribe aqui..." 
+                       #inputMensaje (keyup.enter)="addMensaje(inputMensaje.value); inputMensaje.value=''">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" (click)="addMensaje(inputMensaje.value); inputMensaje.value=''">
+                        <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="contenido" >
+        <h3>Jobs</h3>
+        <p>Contenido widget</p>
+    </div>
+    <div class="contenido" >
+        <h3>TicketChat</h3>
+        <p>Contenido widget</p>
+    </div>
+</div>

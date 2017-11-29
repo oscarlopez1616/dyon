@@ -1,0 +1,205 @@
+@import "../variables-tickon";
+@import "../../../../node_modules/compass-sass-mixins/lib/compass";
+
+a{
+	cursor:pointer;
+}
+a:hover, a:active, a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+
+/********************** COLORES MODULOS  */
+
+/********************** MODULO PLANNER */
+.modulo-planner .menu-modulo-grupo li .active, .modulo-planner .menu-modulo-grupo li:hover .active{
+    background-color: #967f00;
+}
+.modulo-planner .badge.background-by-modulo{
+    background-color: #c5a600;
+}
+.modulo-planner .background-by-modulo, .casilla-menu-principal-planner.casilla-menu-principal{
+    background-color: #c5a600;
+}
+.modulo-planner .color-by-modulo {
+    color: #c5a600;
+}
+
+/********************** MODULO COFFEE */
+.modulo-coffee .menu-modulo-grupo li .active, .modulo-coffee .menu-modulo-grupo li:hover .active{
+    background-color: #865112;
+}
+.modulo-coffee .badge.background-by-modulo{
+    background-color: #C57C19;
+}
+.modulo-coffee .background-by-modulo, .casilla-menu-principal-coffee.casilla-menu-principal{
+    background-color: #a16616;
+}
+.modulo-coffee .color-by-modulo {
+    color: #a16616;
+}
+
+/********************** MODULO PARTNER */
+.modulo-partner .menu-modulo-grupo li .active, .modulo-partner .menu-modulo-grupo li:hover .active{
+    background-color: #8c4016;
+}
+.modulo-partner .badge.background-by-modulo{
+    background-color: #cc6626;
+}
+.modulo-partner .background-by-modulo, .casilla-menu-principal-partner.casilla-menu-principal{
+    background-color: #9c5026;
+}
+.modulo-partner .color-by-modulo {
+    color: #9c5026;
+}	
+
+/********************** MODULO CMS */
+.modulo-cms .menu-modulo-grupo li .active, .modulo-cms .menu-modulo-grupo li:hover .active{
+    background-color: #7D712E;
+}
+.modulo-cms .badge.background-by-modulo{
+    background-color: #AF9F50;
+}
+.modulo-cms .background-by-modulo, .casilla-menu-principal-cms.casilla-menu-principal{
+    background-color: #918234;
+}
+.modulo-cms .color-by-modulo {
+    color: #918234;
+}	
+
+/********************** MODULO CONNECT */
+.modulo-connect .menu-modulo-grupo li .active, .modulo-connect .menu-modulo-grupo li:hover .active{
+    background-color: #36695C;
+}
+.modulo-connect .badge.background-by-modulo{
+    background-color: #38AD90;
+}
+.modulo-connect .background-by-modulo, .casilla-menu-principal-connect.casilla-menu-principal{
+    background-color: #377b6a;
+}
+.modulo-connect .color-by-modulo {
+    color: #377b6a;
+}
+
+/********************** MODULO SHOPPING */
+.modulo-shopping .menu-modulo-grupo li .active, .modulo-shopping .menu-modulo-grupo li:hover .active{
+    background-color: #485B6F;
+}
+.modulo-shopping .badge.background-by-modulo{
+    background-color: #6598B0;
+}
+.modulo-shopping .background-by-modulo, .casilla-menu-principal-shopping.casilla-menu-principal{
+    background-color: #4D6B80;
+}
+.modulo-shopping .color-by-modulo {
+    color: #4D6B80;
+}
+
+/********************** MODULO BOXOFFICE */
+.modulo-boxoffice .menu-modulo-grupo li .active, .modulo-boxoffice .menu-modulo-grupo li:hover .active{
+    background-color: #587120 ;
+}
+.modulo-boxoffice .badge.background-by-modulo{
+    background-color: #6B8C22;
+}
+.modulo-boxoffice .background-by-modulo, .casilla-menu-principal-boxoffice.casilla-menu-principal{
+    background-color: #62811d;
+}
+.modulo-boxoffice .color-by-modulo {
+    color: #62811d;
+}
+
+/********************** MODULO BILLING */
+.modulo-billing .menu-modulo-grupo li .active, .modulo-billing .menu-modulo-grupo li:hover .active{
+    background-color: #345D37;
+}
+.modulo-billing .badge.background-by-modulo{
+    background-color: #529E58;
+}
+.modulo-billing .background-by-modulo, .casilla-menu-principal-billing.casilla-menu-principal{
+    background-color: #3b7240;
+}
+.modulo-billing .color-by-modulo {
+    color: #3b7240;
+}
+
+/********************** MODULO CLUB */
+.modulo-club .menu-modulo-grupo li .active, .modulo-club .menu-modulo-grupo li:hover .active{
+    background-color: #583440;
+}
+.modulo-club .badge.background-by-modulo{
+    background-color: #9E5C73;
+}
+.modulo-club .background-by-modulo, .casilla-menu-principal-club.casilla-menu-principal{
+    background-color: #734B59;
+}
+.modulo-club .color-by-modulo {
+    color: #754656;
+}
+
+
+
+
+
+/******************************************************************************************/
+/*****************************************  BotonOk  ********************************/
+/******************************************************************************************/
+
+
+#pagina-centro-superior-derecha .button-ok-principal {
+	background: #50b050;
+	color: #fff;
+	border-color: #469646;
+        @include transition-property (background);
+        @include transition-duration (0.3s);
+}
+.button-ok-principal span {
+	color: #fff;
+}
+.button-ok:hover, #pagina-centro-superior-derecha .button-ok-principal:hover{
+	background: #82ce82;
+	color: #fff;
+	border-color: #50b050;
+}
+.button-ok span {
+	color: #50b050;
+}
+.button-ok:hover span {
+	color: #fff;
+}
+	
+
+#pagina-centro-superior-derecha .button-ok span.glyphicon	{
+	margin-right: 4px;
+}
+
+/******************************************************************************************/
+/*****************************************  BotonKo  ********************************/
+/******************************************************************************************/
+	
+	
+	
+#pagina-centro-superior-derecha .button-ko-principal {
+	background: #cd4642;
+	color: #fff;
+	border-color: #a43835;
+        @include transition-property (background);
+        @include transition-duration (0.3s);
+}
+.button-ko-principal span {
+	color: #fff;
+}
+ .button-ko:hover, #pagina-centro-superior-derecha .button-ko-principal:hover {
+	background: #e47976;
+	color: #fff;
+	border-color: #cd4642;
+}
+
+ .button-ko:hover span {
+	color: #fff;
+}
+
+#pagina-centro-superior-derecha .button-ko span.glyphicon	{
+	margin-right: 4px;
+}

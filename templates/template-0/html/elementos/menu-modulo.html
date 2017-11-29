@@ -1,0 +1,8 @@
+<span  class="logo-modulo hidden-sm hidden-xs" [ngClass]="{'active': pagina.selecMenuLateralPrincipal===0}"  ></span>
+
+
+<nav class="menu-pagina-lateral-principal" data-spy="affix" data-target="#_pagina-scroll" data-offset-top="135">
+     <!--    todos los grupos de menus en el selector menu-modulo-grupo-->
+     <menu-modulo-grupo *ngFor="#menuGrupo of menuModulo.menusGrupo" [menuGrupo]='menuGrupo' [i]="i">
+     </menu-modulo-grupo>
+</nav>

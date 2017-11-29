@@ -1,0 +1,31 @@
+<div class="col-sm-12  hidden-md hidden-lg" id="pagina-asistente-responsive">
+    <div class="row" >
+        <div class="col-xs-6">   
+            <button type="button" class="btn btn-default boton-desplegable-menus background-by-modulo" (click)='clickDesplegableMenus()'>
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            </button>
+
+        </div>
+        <div class="col-xs-6">
+            <button type="button" class="btn btn-default boton-desplegable-pagina-superior-derecha" (click)='clickPaginaSuperiorDerecha()' 
+                    [ngClass]="{'es-desplegado-pagina-superior-derecha': pagina.esDesplegadoPaginaSuperiorDerecha}">
+                    <span class="badge background-by-modulo">4</span> <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-sm-12  hidden-md hidden-lg" >
+    <nav class="row selector-menus" >
+        <div class="col-xs-6">  
+            <button type="button" class="btn btn-default" >
+                <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span> Planner
+            </button>
+        </div>
+        <div class="col-xs-6">  
+            <button type="button" class="btn btn-default" >
+                <span class="glyphicon glyphicon-th" aria-hidden="true"></span> Cambiar App
+            </button>
+        </div>
+
+    </nav>
+</div>

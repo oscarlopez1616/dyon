@@ -1,0 +1,45 @@
+<div id="desplegable-modulos" [ngClass]="{'opened': pagina.esOpenMenuPrincipal,'closed': !pagina.esOpenMenuPrincipal}">
+	<div id="desactivador-modulos"></div>
+	<div class="boton-desplegable-modulos">
+		<span></span>
+	</div>
+
+	<div id="desplegable-modulos-contenedor" (mouseleave)="cerrarMenuModulo()">
+		<div class="desplegable-modulos-fila">
+			<div class="modulo modulo-planner ">
+			<a class="dyico-planner" [routerLink]="['OutletPlannerHome']">TicketEX
+					PLANNER</a>
+			</div>
+			<div class="modulo modulo-coffee ">
+				<a class="dyico-coffee" href="#">TicketEX COFFEE</a>
+			</div>
+			<div class="modulo modulo-partner">
+				<a class="dyico-partner" href="#">TicketEX PARTNER</a>
+			</div>
+		</div>
+		<div class="desplegable-modulos-fila ">
+			<div class="modulo modulo-cmd ">
+				<a class="dyico-cmd" href="#">CMD</a>
+			</div>
+			<div class="modulo modulo-connect ">
+				<a class="dyico-connect" href="#">TicketEX CONNECT</a>
+			</div>
+			<div class="modulo modulo-shopping">
+				<a class="dyico-shopping" href="#">TicketEX SHOPPING</a>
+			</div>
+
+		</div>
+		<div class="desplegable-modulos-fila ">
+			<div class="modulo modulo-boxoffice ">
+				<a class="dyico-boxoffice" href="#">TAQUILLA</a>
+			</div>
+			<div class="modulo modulo-billing ">
+				<a class="dyico-billing" href="#">FACTURACIÓN</a>
+			</div>
+			<div class="modulo modulo-club ">
+				<a class="dyico-club" href="#">TicketEX CLUB</a>
+			</div>
+		</div>
+
+	</div>
+</div>

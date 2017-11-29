@@ -1,0 +1,36 @@
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+$color1GUI:#444444;
+$color2GUI:#2e2e2e;
+$color3GUI:#555555;
+$color1TextoGui:#BBBBBB;
+$color2TextoGui:#808080;
+$colorTextoHoverGui:#EEEEEE;
+$colorSeparacionGUI:#555555;
+$colorBordeGUI:#3a3a3a;
+$colorBordeCentroSuperior:#DDDDDD;
+$anchoBordeGUIGordo:2px;
+$fondoPaginaCentro:#eeeeee;
+$fuenteXS:11px;
+$alturaPaginaSuperior: 28px;
+$margenPaginaCentroSuperior: $alturaPaginaSuperior;
+$alturaPaginaCentroSuperior: 36px;
+$alturaPaginaSuperiorLateral: $alturaPaginaSuperior+$alturaPaginaCentroSuperior;
+$margenPaginaLateral: $alturaPaginaSuperiorLateral;
+$alturaPaginaAsistenteResponsive: 50px;
+$alturaPaginaAsistenteResponsiveSelectorMenus: 40px;
+$anchoBarraColapsarInPagina: 14px;
+$anchoPaginaLateral : 240px;
+$anchoPaginaSuperiorLateral: $anchoPaginaLateral+$anchoBarraColapsarInPagina;
+$paddingPagina: $anchoPaginaLateral+$anchoBarraColapsarInPagina+$grid-gutter-width/2;
+$paddingPaginaFixed: $anchoPaginaLateral+$anchoBarraColapsarInPagina;
+$leftBarraColapsarInPagina: $anchoPaginaLateral+$anchoBarraColapsarInPagina;
+$anchoMinimoBotonPaginaSuperiorDerecha: 37px;
+$anchoBotonTeamworkPaginaSuperiorDerecha: 172px;
+$numeroBotonesPaginaSuperiorDerecha: 3; //Son el numero de botones a parte del teamwork (ayuda, configuracion, cerrar sesion)
+$anchoDesplegablePaginaSuperiorDerecha: $anchoBotonTeamworkPaginaSuperiorDerecha+($anchoMinimoBotonPaginaSuperiorDerecha*$numeroBotonesPaginaSuperiorDerecha);
+$anchoBotonMenuPrincipal : 65px;
+
+$rutaGui : "../../templates/template-0/gui";
+$rutaImg : $rutaGui+"/images";
+

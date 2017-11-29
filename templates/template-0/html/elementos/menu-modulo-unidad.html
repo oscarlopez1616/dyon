@@ -1,0 +1,20 @@
+<!--Si es puente es con un div para que no se vea la mano y no tiene enlace si no es puente es clickable lo hacemos con a-->
+<a *ngIf="!lineaMenu.arbolOfMenusItems.getData().esPuente" class="link-modulo"  
+    href="{{lineaMenu.arbolOfMenusItems.getData().href}}" 
+    [ngClass]="{'active': pagina.menuModuloSelected===lineaMenu.posicionInMenu}" >
+    {{lineaMenu.arbolOfMenusItems.getData().anchorText}}</a>
+
+<div *ngIf="lineaMenu.arbolOfMenusItems.getData().esPuente" class="link-modulo"  
+    [ngClass]="{'active': pagina.menuModuloSelected===lineaMenu.posicionInMenu}" >
+    {{lineaMenu.arbolOfMenusItems.getData().anchorText}}</div>
+
+<div id="link-modulo-{{lineaMenu.arbolOfMenusItems.getData().posicionInMenu}}" class="link-modulo-desplegable" 
+     [ngClass]="{'opened': isMenuOpen,'closed': !isMenuOpen}"
+     (mouseleave)="cerrarMenu()"
+     >
+     <a class="contenido-adicional" (click)="abrirCerrarMenu()" >
+     <span class="glyphicon glyphicon-menu-hamburger"></span></a>
+
+   <mi-tag-menu-unidad [outerHTML]="menuHtml"></mi-tag-menu-unidad>
+
+</div>

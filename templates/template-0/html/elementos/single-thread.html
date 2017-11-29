@@ -1,0 +1,19 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal-{{id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">
+                    {{titulo}}
+                </h4>
+
+            </div>
+            <div class="modal-body">
+                <span [outerHTML]=htmlBody></span>
+            </div>
+            <div class="modal-footer">
+                <span [outerHTML]=htmlFooter></span>
+            </div>
+        </div>
+    </div>
+</div>

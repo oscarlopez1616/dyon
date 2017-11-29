@@ -1,0 +1,12 @@
+@import "../variables-tickon";
+
+.logo-tickon {
+    float: left;
+    width: $anchoPaginaLateral+-$anchoBotonMenuPrincipal+$anchoBarraColapsarInPagina+-$anchoBordeGUIGordo;
+    height: $alturaPaginaSuperiorLateral;
+    $temp : $rutaImg+"/tx-sprite.png";
+    background: url($temp) -43px 0 no-repeat;
+    background-color: $color1GUI;
+    border-right: 10px solid $color1GUI;
+}
+
